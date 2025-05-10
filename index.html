@@ -5,30 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="app.css">
-    <style>
-        .winner{
-            color: green;
-        }
-        .looser{
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
 <body>
-    <h1>Ping Pong Score Keeper</h1>
-    <h2><span id="p1s">0</span> to <span id="p2s">0</span></h2>
-    <select name="" id="slist">
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-    </select>
-    <button id="p1b">Player 1</button>
-    <button id="p2b">Player 2</button>
-    <button id="reset">Reset</button>
-    <script src="app.js"></script>
+    <section class="section">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-2by1">
+                            <img src="https://img.freepik.com/premium-photo/table-tennis-player-black-background-ping-pong-banner-download-photo-table-tennis-player-tenis-racket-packaging-design-image-tennis-ball-box-template_881647-2297.jpg" alt="">
+                        </figure>
+                    </div>
+                    <header class="card-header">
+                      <p class="card-header-title">Ping Pong Score Keeper</p>
+                      <button class="card-header-icon" aria-label="more options">
+                        <span class="icon">
+                          <i class="fas fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                      </button>
+                    </header>
+                    <div class="card-content">
+                      <div class="content">
+                        <h2 class="title is-1"><span id="p1s">0</span> to <span id="p2s">0</span></h2>
+                        <p class="subtitle">Use the below button to keep scoring</p>
+                        <label for="slist" class="label is-large is-inline">Playing To</label>
+                        <div class="select is-rounded">
+                            <select name="" id="slist">
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                      </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button id="p1b" class="button is-primary card-footer-item is-large">+1 Player One</button>
+                        <button id="p2b" class="button is-info card-footer-item is-large">+1 Player Two</button>
+                        <button id="reset" class="button is-danger card-footer-item is-large">Reset</button>
+                      
+                  </div>
+            </div>
+        </div>
+    </div> 
+</section>
+    <script src="script.js"></script>
 </body>
 </html>

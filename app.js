@@ -13,8 +13,10 @@ p1b.addEventListener('click',() => {
         p1scr++;
         if(p1scr === winScr){
             isGameOver = true;
-            p1s.classList.add('winner');
-            p2s.classList.add('looser');
+            p1s.classList.add('has-text-success');
+            p2s.classList.add('has-text-danger');
+            p1b.disabled = true;
+            p2b.disabled = true;
         }
         p1s.innerText = p1scr;
     }
@@ -28,8 +30,10 @@ p2b.addEventListener('click',() => {
         p2scr++;
         if(p2scr === winScr){
             isGameOver = true;
-            p2s.classList.add('winner');
-            p1s.classList.add('looser');
+            p2s.classList.add('has-text-success');
+            p1s.classList.add('has-text-danger');
+            p1b.disabled = true;
+            p2b.disabled = true;
         }
         p2s.innerText = p2scr;
     }
@@ -42,7 +46,8 @@ function reset (){
     p2scr=0;
     p1s.innerText = p1scr;
     p2s.innerText = p2scr;
-    p1s.classList.remove('winner', 'looser');
-    p2s.classList.remove('winner', 'looser');
-
+    p1s.classList.remove('has-text-success', 'has-text-danger');
+    p2s.classList.remove('has-text-success', 'has-text-danger');
+    p1b.disabled = false;
+    p2b.disabled = false;
 }
