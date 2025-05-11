@@ -9,10 +9,16 @@ const p2={
     button: document.querySelector('#p2b')
 }
 const re = document.querySelector('#reset');
-const slist = document.querySelector("#slist");
-
+const slist = document.querySelector('#slist');
+const gameList = document.querySelector('#gameList');
+const gameImg = document.querySelector('#gameImg');
 let isGameOver = false;
 let winScr = 3;
+gameList.addEventListener('change', ()=>{
+
+    gameName.innerText = gameList.value;
+    gameImg.src = ''
+})
 
 function updateScores(player, opponent){
     if(! isGameOver){
