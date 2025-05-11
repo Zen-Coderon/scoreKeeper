@@ -12,14 +12,27 @@ const re = document.querySelector('#reset');
 const slist = document.querySelector('#slist');
 const gameList = document.querySelector('#gameList');
 const gameImg = document.querySelector('#gameImg');
+const gameName = document.querySelector('#gameName');
 let isGameOver = false;
 let winScr = 3;
-gameList.addEventListener('change', ()=>{
-
+const gameImages = {
+    "Ping_Pong": "assets/ping_pong.avif",
+    "Rock-Paper-Scissors": "assets/rock_paper_scissors.jpg",
+    "Tick-Tac-Toe": "assets/tic_tac_toe.jpg",
+    "Foosball": "assets/foosball1.jpg",
+    "Jenga": "assets/jenga.jpg",
+    "Pickleball_(Singles)": "assets/pickleball.jpg",
+    "Arm_Wrestling": "assets/Armwrestling.jpg"
+  };
+  
+  gameList.addEventListener('change', () => {
     gameName.innerText = gameList.value;
-    gameImg.src = ''
-})
-
+    gameImg.src = gameImages[gameList.value] || 'assets/default.jpg';
+  });
+  gameImg.onerror = () => {
+    alert('⚠️ Image failed to load! Check if the file name and extension are correct.');
+  };
+  
 function updateScores(player, opponent){
     if(! isGameOver){
         player.score++;
@@ -53,4 +66,5 @@ function reset (){
         p.display.classList.remove('has-text-success', 'has-text-danger');
         p.button.disabled = false;
     }
+    gameImg.src = 'assets/ping_pong.avif'
 }
