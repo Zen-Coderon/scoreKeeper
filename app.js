@@ -28,6 +28,7 @@ const gameImages = {
   gameList.addEventListener('change', () => {
     gameName.innerText = gameList.value;
     gameImg.src = gameImages[gameList.value] || 'assets/default.jpg';
+    reset();
   });
   gameImg.onerror = () => {
     alert('⚠️ Image failed to load! Check if the file name and extension are correct.');
@@ -66,5 +67,6 @@ function reset (){
         p.display.classList.remove('has-text-success', 'has-text-danger');
         p.button.disabled = false;
     }
-    gameImg.src = 'assets/ping_pong.avif'
+
+    
 }

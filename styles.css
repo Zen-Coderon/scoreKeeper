@@ -1,6 +1,17 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
 body {
+    background-image: url('assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding: 10px;
-}
+  }
+  
 
 .card {
     max-width: 100%;

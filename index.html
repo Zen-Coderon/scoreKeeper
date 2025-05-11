@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Score Keeper</title>
+    <link rel="icon" type="image/png" href="assets/trophy.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
 </head>
@@ -14,7 +15,8 @@
             <div class="column is-half is-offset-one-quarter">
                 <div class="card">
                     <div class="card-image">
-                        <div class="select is-rounded">
+                        <section class="title is-spaced">
+                        <div class="select is-rounded is-medium">
                             <select name="" id="gameList">
                                 <option value="Ping_Pong">Ping_Pong</option>
                                 <option value="Rock-Paper-Scissors">Rock-Paper-Scissors</option>
@@ -25,12 +27,13 @@
                                 <option value="Arm_Wrestling">Arm_Wrestling</option>
                             </select>
                         </div>
+                        </section>
                         <figure class="image is-2by1">
                             <img id="gameImg" src="assets/ping_pong.avif" alt="">
                         </figure>
                     </div>
                     <header class="card-header">
-                      <p class="card-header-title" id="gameName">Ping Pong Score Keeper</p>
+                      <p class="card-header-title title is-4" id="gameName">Ping Pong Score Keeper</p>
                       <button class="card-header-icon" aria-label="more options">
                         <span class="icon">
                           <i class="fas fa-angle-down" aria-hidden="true"></i>
@@ -40,7 +43,7 @@
                     <div class="card-content">
                       <div class="content">
                         <h2 class="title is-1"><span id="p1s">0</span> to <span id="p2s">0</span></h2>
-                        <p class="subtitle">Use the below button to keep scoring</p>
+                        <p class="subtitle">Use the below buttons to keep scoring</p>
                         <label for="slist" class="label is-large is-inline">Playing To</label>
                         <div class="select is-rounded">
                             <select name="" id="slist">
