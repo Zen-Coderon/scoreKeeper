@@ -1,0 +1,50 @@
+body {
+    padding: 10px;
+}
+
+.card {
+    max-width: 100%;
+    width: 100%;
+}
+
+.select select {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-header-title {
+    font-size: 1.2rem;
+}
+
+h2.title.is-1 {
+    font-size: 2rem;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+
+.card-footer {
+    flex-wrap: wrap;
+}
+
+.card-footer .button {
+    flex: 1 1 100%;
+    margin: 5px 0;
+}
+
+@media (min-width: 769px) {
+    .card-footer .button {
+        flex: 1;
+        margin: 0;
+    }
+    h2.title.is-1 {
+        font-size: 3rem;
+    }
+}
